@@ -96,7 +96,11 @@ public class RedBack extends LinearOpMode {
 
             LeftGrip.setPosition(LeftGripOuttake);
             RightGrip.setPosition(RightGripOuttake);
+<<<<<<< HEAD
             Drone.setPosition(0.6);
+=======
+            Drone.setPosition(0.7);
+>>>>>>> d51de313125352f74323feb672024258b047c90e
 
         }
 
@@ -124,12 +128,20 @@ public class RedBack extends LinearOpMode {
                 // Going for next Drop
                 .waitSeconds(0.5)
                 .back(2)
+<<<<<<< HEAD
                 .turn(Math.toRadians(-46.5))
+=======
+                .turn(Math.toRadians(-45.5)) // 46.5
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(()-> RotateMotorClockPos(530, 0.4))
                 .addTemporalMarker(()-> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(0.5)
+<<<<<<< HEAD
                 .forward(15.5) // 5
+=======
+                .forward(14.5) // 5
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(()-> LeftGrip.setPosition(LeftGripIntake)) // Right Grip Open
 
@@ -138,27 +150,47 @@ public class RedBack extends LinearOpMode {
                 .addTemporalMarker(()-> RotateMotorClockPos(0, 0.4))
                 .addTemporalMarker(()-> Arm.setPosition(armIntake)) // arm Movement
                 .turn(Math.toRadians(-40))
+<<<<<<< HEAD
                 .forward(11)
+=======
+                .forward(10)
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .build();
 
         TrajectorySequence positionLeft = drive.trajectorySequenceBuilder(startPose)
                 .addTemporalMarker(()-> Arm.setPosition(armIntake))
                 .waitSeconds(1)
+<<<<<<< HEAD
                 .forward(10) // 8.5
                 .turn(Math.toRadians(21)) // -35
                 .addTemporalMarker(()-> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
                 .waitSeconds(0.5)
                 .back(4) // 4
+=======
+                .forward(9.6) // 8.5
+                .turn(Math.toRadians(21)) // -35
+                .addTemporalMarker(()-> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
+                .waitSeconds(0.5)
+                .back(4) // 4hjhjhjjhj
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .turn(Math.toRadians(-30)) // 30
                 .waitSeconds(0.5)
 
                 // Going For next drop
                 .forward(7)
+<<<<<<< HEAD
                 .turn(Math.toRadians(-74.2)) // 90
                 .addTemporalMarker(()-> RotateMotorClockPos(530, 0.4))
                 .addTemporalMarker(()-> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(0.5)
                 .forward(11.5) // 2.8
+=======
+                .turn(Math.toRadians(-74.5)) // 90
+                .addTemporalMarker(()-> RotateMotorClockPos(530, 0.4))
+                .addTemporalMarker(()-> Arm.setPosition(0.5)) // arm Movement
+                .waitSeconds(0.5)
+                .forward(10.5) // 2.8
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(()-> LeftGrip.setPosition(LeftGripIntake)) // Right Grip Open
                 .waitSeconds(1)
@@ -170,23 +202,39 @@ public class RedBack extends LinearOpMode {
                 .addTemporalMarker(()-> Arm.setPosition(armIntake)) // arm Movement
                 .waitSeconds(0.5)
                 .turn(Math.toRadians(-45)) // 50
+<<<<<<< HEAD
                 .forward(12)
+=======
+                .forward(10)
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .build();
 
         TrajectorySequence positionCenter = drive.trajectorySequenceBuilder(startPose)
                 .addTemporalMarker(()-> Arm.setPosition(armIntake))
                 .waitSeconds(0.5)
+<<<<<<< HEAD
                 .forward(11.2)
                 .addTemporalMarker(()-> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
                 .waitSeconds(0.5)
                 .back(3)
                 .turn(Math.toRadians(-74.9))
+=======
+                .forward(10.9)
+                .addTemporalMarker(()-> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
+                .waitSeconds(0.5)
+                .back(3)
+                .turn(Math.toRadians(-75.5))
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 // going for next pixel
                 .waitSeconds(0.5)
                 .addTemporalMarker(()-> RotateMotorClockPos(530, 0.4))
                 .addTemporalMarker(()-> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(1)
+<<<<<<< HEAD
                 .forward(15)
+=======
+                .forward(13.5)
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(()-> LeftGrip.setPosition(LeftGripIntake)) // Left Grip Open
                 .waitSeconds(0.4)
@@ -196,7 +244,11 @@ public class RedBack extends LinearOpMode {
                 .addTemporalMarker(()-> Arm.setPosition(armIntake)) // arm Movement
                 .waitSeconds(1)
                 .turn(Math.toRadians(-36))
+<<<<<<< HEAD
                 .forward(11)
+=======
+                .forward(9)
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(2)
                 .build();
 
@@ -220,6 +272,12 @@ public class RedBack extends LinearOpMode {
             }
 
         }
+<<<<<<< HEAD
+=======
+        if(isStopRequested()){
+            Drone.setPosition(0.7);
+        }
+>>>>>>> d51de313125352f74323feb672024258b047c90e
     }
     public void RotateMotorClockPos ( int Pos, double POWER){
         Rotate.setTargetPosition(Pos);

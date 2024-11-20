@@ -104,6 +104,10 @@ public class BlueBack extends LinearOpMode {
             telemetry.addData("position", propPipeLine.getLocation());
             telemetry.update();
         }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d51de313125352f74323feb672024258b047c90e
         randomization = propPipeLine.getLocation();
         portal.close();
 
@@ -124,6 +128,7 @@ public class BlueBack extends LinearOpMode {
                 .back(5)
 //                .turn(Math.toRadians(-18)) // -30.5
 //                .back(5)
+<<<<<<< HEAD
                 .turn(Math.toRadians(51))
                 .waitSeconds(0.5)
 //                .forward(1)
@@ -131,6 +136,15 @@ public class BlueBack extends LinearOpMode {
                 .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(0.5)
                 .forward(13) // 5
+=======
+                .turn(Math.toRadians(50))
+                .waitSeconds(0.5)
+//                .forward(1)
+                .addTemporalMarker(() -> RotateMotorClockPos(540, 0.4))
+                .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
+                .waitSeconds(0.5)
+                .forward(10.8) // 12
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(() -> LeftGrip.setPosition(LeftGripIntake)) // Right Grip Open
 
@@ -138,27 +152,46 @@ public class BlueBack extends LinearOpMode {
                 .back(8)
                 .addTemporalMarker(() -> RotateMotorClockPos(0, 0.4))
                 .addTemporalMarker(() -> Arm.setPosition(armIntake)) // arm Movement
+<<<<<<< HEAD
                 .turn(Math.toRadians(35))
                 .forward(9)
+=======
+                .turn(Math.toRadians(33))
+                .forward(11)
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .build();
 
         TrajectorySequence positionRight = drive.trajectorySequenceBuilder(startPose)
                 .addTemporalMarker(() -> Arm.setPosition(armIntake))
                 .waitSeconds(1)
+<<<<<<< HEAD
                 .forward(7.8) // 8.5
                 .turn(Math.toRadians(-26)) // -35
+=======
+                .forward(8.3) // 8.5
+                .turn(Math.toRadians(-25)) // -26
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .addTemporalMarker(() -> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
                 .waitSeconds(0.5)
                 .back(3) // 4
                 .turn(Math.toRadians(30)) // 30
                 .waitSeconds(0.5)
                 // Going For next drop
+<<<<<<< HEAD
                 .forward(2)
                 .turn(Math.toRadians(67.5)) // 90
                 .addTemporalMarker(() -> RotateMotorClockPos(450, 0.4))
                 .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(0.5)
                 .forward(12) // 2.8
+=======
+                .forward(3.2)
+                .turn(Math.toRadians(70)) // 90
+                .addTemporalMarker(() -> RotateMotorClockPos(500, 0.4))
+                .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
+                .waitSeconds(0.5)
+                .forward(10.2) // 11
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(() -> LeftGrip.setPosition(LeftGripIntake)) // Right Grip Open
                 .waitSeconds(0.5)
@@ -176,6 +209,7 @@ public class BlueBack extends LinearOpMode {
         TrajectorySequence positionCenter = drive.trajectorySequenceBuilder(startPose)
                 .addTemporalMarker(() -> Arm.setPosition(armIntake))
                 .waitSeconds(0.5)
+<<<<<<< HEAD
                 .forward(11.5)
                 .addTemporalMarker(() -> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
                 .waitSeconds(0.5)
@@ -187,6 +221,19 @@ public class BlueBack extends LinearOpMode {
                 .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
                 .waitSeconds(1)
                 .forward(11.3)
+=======
+                .forward(11)ccccccccccccccccccccccccccccccccccccccccccccccccfvj
+                .addTemporalMarker(() -> RightGrip.setPosition(RightGripIntake)) // Left Grip Open
+                .waitSeconds(0.5)
+                .back(3)
+                .turn(Math.toRadians(81))
+                // going for next pixel
+                .waitSeconds(0.5)
+                .addTemporalMarker(() -> RotateMotorClockPos(520, 0.4))
+                .addTemporalMarker(() -> Arm.setPosition(0.5)) // arm Movement
+                .waitSeconds(1)
+                .forward(10.3) // 10.3
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .waitSeconds(0.5)
                 .addTemporalMarker(() -> LeftGrip.setPosition(LeftGripIntake)) // Left Grip Open
                 .waitSeconds(0.4)
@@ -195,7 +242,11 @@ public class BlueBack extends LinearOpMode {
                 .addTemporalMarker(() -> RotateMotorClockPos(0, 0.4))
                 .addTemporalMarker(() -> Arm.setPosition(armIntake)) // arm Movement
                 .waitSeconds(0.5)
+<<<<<<< HEAD
                 .turn(Math.toRadians(37))
+=======
+                .turn(Math.toRadians(35))
+>>>>>>> d51de313125352f74323feb672024258b047c90e
                 .forward(10)
                 .build();
 
@@ -221,6 +272,12 @@ public class BlueBack extends LinearOpMode {
             }
 
         }
+<<<<<<< HEAD
+=======
+        if(isStopRequested()){
+            Drone.setPosition(0.7);
+        }
+>>>>>>> d51de313125352f74323feb672024258b047c90e
     }
     public void RotateMotorClockPos ( int Pos, double POWER){
         Rotate.setTargetPosition(Pos);

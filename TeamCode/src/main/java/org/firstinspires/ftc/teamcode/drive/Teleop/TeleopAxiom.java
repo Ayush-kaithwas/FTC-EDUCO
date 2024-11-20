@@ -23,7 +23,11 @@ public class TeleopAxiom extends LinearOpMode {
     public static DcMotorEx Rotate;
 
     // ============================== Drone Shoot Value ============================
+<<<<<<< HEAD
     public static double droneShoot=0.3, droneRest=0.6;
+=======
+    public static double droneShoot=0.3, droneRest=0.7;
+>>>>>>> d51de313125352f74323feb672024258b047c90e
 
     // ============================= Arm Intake and Drop Value =============================
     public static double armIntake = 0.22, armDrop = 0.85;
@@ -83,6 +87,10 @@ public class TeleopAxiom extends LinearOpMode {
                 // Arm In Intake Pos
                 RotateMotorAntiClockPos(RotateIntakepos, 0.3);
                 Gripper(LeftGripIntake, RightGripIntake);
+<<<<<<< HEAD
+=======
+                LiftMotorDown(LiftClosepos, 0.5); // Extra added
+>>>>>>> d51de313125352f74323feb672024258b047c90e
             }
              if(gamepad1.left_bumper)
             {
